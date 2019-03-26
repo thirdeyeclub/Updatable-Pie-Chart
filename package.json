@@ -1,6 +1,28 @@
 {
+  "name": "pie-chart",
+  "version": "0.2.0",
+  "description": "An updatable pie graph",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thirdeyeclub/Updatable-Pie-Chart"
+  },
+  "keywords": [
+    "pie",
+    "chart",
+    "pie chart",
+    "graph",
+    "React",
+    "sqlite3",
+    "Javascript"
+  ],
+  "author": "Taylor 'Indie' Blount",
   "dependencies": {
     "knex": "^0.16.3",
+    "react": "^16.8.5",
     "sqlite3": "^4.0.6"
   }
 }
