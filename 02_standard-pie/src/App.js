@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Chart from './Components/Pie';
 import Form from './Components/Form';
+import InfoTable from './Components/InfoTable';
 import styled from 'styled-components';
 
 const FluidContainer = styled.div`
@@ -16,6 +17,7 @@ class App extends Component {
     return (
       <FluidContainer>
         <Chart />
+        <InfoTable/>
         <Form />
       </FluidContainer>
       
