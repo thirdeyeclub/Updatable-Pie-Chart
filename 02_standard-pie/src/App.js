@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Pie from './Components/Pie';
+import Chart from './Components/Pie';
 import Form from './Components/Form';
 import styled from 'styled-components';
 
@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <FluidContainer>
-        <Pie />
+        <Chart />
         <Form />
       </FluidContainer>
       
