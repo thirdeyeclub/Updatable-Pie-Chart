@@ -8,7 +8,8 @@
     "helmet": "^3.16.0",
     "knex": "^0.16.3",
     "knex-cleaner": "^1.1.4",
-    "node": "^11.13.0",
+    "node": "^11.13.0",   
+    "nodemon": "^1.18.11",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8",
@@ -17,6 +18,7 @@
     "styled-components": "^4.2.0"
   },
   "scripts": {
+    "server": "nodemon",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
