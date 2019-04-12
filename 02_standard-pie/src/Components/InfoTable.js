@@ -9,17 +9,17 @@ margin-top:-60px;
 line-height: 10%;`
 
 const InfoTable = function(){
-    const [pops, setUsers] = useState([]);
+    const [pops, setPops] = useState([]);
 
 useEffect(e => {
     const endpoint = `/pop`;
     axios.get(endpoint)
     .then(res => {
+        setPops([]);
         console.log(res.data);
-        setUsers(res.data);
     })
     .catch(error => {
-        console.log('USERS ERROR');
+        console.log(error, '*** DATA ERROR ***');
     });
 }, []);
     return(
@@ -27,7 +27,7 @@ useEffect(e => {
             <p>Data</p>
             <ul>
             {pops.map(pop => (
-        <li key={pop.id}>{pop.country}:{pop.population}</li>))}
+        <li>{pop.country}:{pop.population}</li>))}
             </ul>
         </InfoDiv>
     )
