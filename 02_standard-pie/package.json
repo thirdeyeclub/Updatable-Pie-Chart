@@ -1,6 +1,6 @@
 {
   "name": "pie-chart",
-  "version": "0.1.0",
+  "version": "0.3.14",
   "private": true,
   "scripts": {
     "server": "nodemon index.js",
@@ -11,6 +11,7 @@
     "s-test": "jest --watch --verbose"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
@@ -21,6 +22,8 @@
     "nodemon": "^1.18.11",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "recharts": "^1.5.0",
     "sqlite3": "^4.0.6",
@@ -35,11 +38,7 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "jest": {
-		"testEnvironment": "node"
-	},
   "devDependencies": {
-    "jest": "^24.7.1",
     "supertest": "^4.0.2"
   }
 }

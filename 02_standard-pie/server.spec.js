@@ -10,8 +10,4 @@ describe('SERVER', () => {
             expect(res.status).toBe(200)        
         })
     });
-    //
-    it('', () => {
-        
-    });
 });

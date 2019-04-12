@@ -1,21 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import axios from 'axios';
 
 //const data = require('../../database/pieBase.db3')
 
-const InfoDiv = styled.h4`
+const InfoDiv = styled.h1`
 margin-top:-60px;
 line-height: 10%;`
 
 const InfoTable = function(){
+    const [pops, setUsers] = useState([]);
+
+useEffect(e => {
+    const endpoint = `/pop`;
+    axios.get(endpoint)
+    .then(res => {
+        console.log(res.data);
+        setUsers(res.data);
+    })
+    .catch(error => {
+        console.log('USERS ERROR');
+    });
+}, []);
     return(
         <InfoDiv>
-    <h6>China Population: 1389618778</h6>
-    <h6>India Population: 1311559204 </h6>
-    <h6>US Population: 331883986</h6>
-    <h6>Indonesia Population: 264935824</h6>
-    <h6>Pakistan Population: 210797836 </h6>
-    <h6>Brazil Population: 	210301591 </h6>
+            <p>Data</p>
+            <ul>
+            {pops.map(pop => (
+        <li key={pop.id}>{pop.country}:{pop.population}</li>))}
+            </ul>
         </InfoDiv>
     )
 }
