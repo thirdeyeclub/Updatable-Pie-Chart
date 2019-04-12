@@ -1,0 +1,46 @@
+{
+  "name": "pie-chart",
+  "version": "0.3.14",
+  "private": true,
+  "scripts": {
+    "server": "nodemon index.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "s-test": "jest --watch --verbose"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "helmet": "^3.16.0",
+    "knex": "^0.16.3",
+    "knex-cleaner": "^1.1.4",
+    "node": "^11.13.0",
+    "nodemon": "^1.18.11",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8",
+    "recharts": "^1.5.0",
+    "sqlite3": "^4.0.6",
+    "styled-components": "^4.2.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "react-test-renderer": "^16.8.6",
+    "react-testing-library": "^6.1.2",
+    "supertest": "^4.0.2"
+  }
+}
