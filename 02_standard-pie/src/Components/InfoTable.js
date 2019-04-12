@@ -1,36 +1,48 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
 //const data = require('../../database/pieBase.db3')
 
+
 const InfoDiv = styled.h1`
 margin-top:-60px;
 line-height: 10%;`
 
-const InfoTable = function(){
-    const [pops, setPops] = useState([]);
+class InfoTable extends React.Component{
+    state = {
+    pops:[]
+    };
 
-useEffect(e => {
-    const endpoint = `/pop`;
+    componentDidMount(){
+    const endpoint = `/pop/`;
     axios.get(endpoint)
     .then(res => {
-        setPops([]);
+        this.setState({pops : res.data})
         console.log(res.data);
     })
     .catch(error => {
         console.log(error, '*** DATA ERROR ***');
     });
-}, []);
-    return(
-        <InfoDiv>
+}
+render(){ return(
+    <InfoDiv>
             <p>Data</p>
             <ul>
-            {pops.map(pop => (
-        <li>{pop.country}:{pop.population}</li>))}
+            { this.state.pops.map(pop => (<li>{pop.country}:{pop.population}</li>))}
             </ul>
-        </InfoDiv>
-    )
+        </InfoDiv>)
+}
+
+//     return(
+//         <InfoDiv>
+//             <p>Data</p>
+//             <ul>
+//             {pops.map(pop => (
+//         <li>{pop.country}:{pop.population}</li>))}
+//             </ul>
+//         </InfoDiv>
+// )
 }
 
 export default InfoTable;

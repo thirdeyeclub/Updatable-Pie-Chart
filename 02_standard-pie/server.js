@@ -14,6 +14,6 @@ server.get('/', (req, res) => {
 res.status(200).send(`Today is ${utc}`);
 });
 
-server.use('/pop', popRouter);
+server.use('/pop/', popRouter);
 module.exports = server;
 
