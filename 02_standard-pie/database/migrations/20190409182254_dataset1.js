@@ -1,5 +1,5 @@
 exports.up = function(knex) {
-    return knex.schema.createTable('population by country', table => {
+    return knex.schema.createTable('pop', table => {
         //id
         table.increments();
         // name
@@ -9,5 +9,5 @@ exports.up = function(knex) {
     };
     
     exports.down = function(knex) {
-    return knex.schema.dropTableIfExists('population by country')
+    return knex.schema.dropTableIfExists('pop')
     };

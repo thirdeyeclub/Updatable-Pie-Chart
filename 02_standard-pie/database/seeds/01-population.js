@@ -1,5 +1,5 @@
 exports.seed = function(knex) {
-  return knex('population by country').insert([
+  return knex('pop').insert([
     { id: 1 , country: 'China' , population:1389618778 },
     { id: 2 , country: 'India' , population: 1311559204},
     { id: 3 , country: 'US' , population: 331883986 },

@@ -1,7 +1,7 @@
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
-
+const popRouter = require('./route/popRouter.js')
 
 const server = express();
 server.use(cors());
@@ -14,6 +14,6 @@ server.get('/', (req, res) => {
 res.status(200).send(`Today is ${utc}`);
 });
 
-
+server.use('/pop', popRouter);
 module.exports = server;
 
